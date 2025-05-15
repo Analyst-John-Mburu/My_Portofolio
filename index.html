@@ -100,19 +100,33 @@
 										</style>
 									  </head>
 									  <body>
-									  
-									
-									  
-									  <!-- View Buttons -->
-									  <a class="button" href="./John-Mburu-Transcript.pdf" target="_blank">View Transcript</a>
-									  <a class="button" href="./John Mburu's Certifications.pdf" target="_blank">View Certification</a>
-									  
-									  <!-- Download Buttons -->
-									  <br><br>
-									  <a class="button" href="./John-Mburu-Transcript.pdf" download>Download Transcript</a>
-									  <a class="button" href="./John Mburu's Certifications.pdf" download>Download Certification</a>
-									  
-									  </body>
+  <script>
+    var isAuthorized = false;
+    var password = prompt("Enter password to view/download the Transcript:");
+    if (password === "99") {
+      isAuthorized = true;
+    }
+  </script>
+
+  <!-- View Buttons -->
+  <div id="transcript-section">
+    <script>
+      if (isAuthorized) {
+        document.write('<a class="button" href="./John-Mburu-Transcript.pdf" target="_blank">View Transcript</a>');
+        document.write('<br><br>');
+        document.write('<a class="button" href="./John-Mburu-Transcript.pdf" download>Download Transcript</a>');
+      } else {
+        document.write('<p><strong>Transcript is restricted. Please enter the correct password to access.</strong></p>');
+      }
+    </script>
+  </div>
+
+  <!-- Certification (Public Access) -->
+  <a class="button" href="./John Mburu\'s Certifications.pdf" target="_blank">View Certification</a>
+  <br><br>
+  <a class="button" href="./John Mburu\'s Certifications.pdf" download>Download Certification</a>
+</body>
+
 											
 									
 								
