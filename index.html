@@ -99,38 +99,20 @@
 										  }
 										</style>
 									  </head>
-									<body>
-
-<!-- Transcript Buttons with Password Protection -->
-<script>
-  function requestTranscriptAccess() {
-    var password = prompt("Enter password to access the transcript:");
-    if (password === "99") {
-      document.getElementById("transcript-buttons").style.display = "block";
-    } else {
-      alert("Incorrect password. Access denied.");
-    }
-  }
-</script>
-
-<!-- Button to Trigger Password Prompt -->
-<button class="button" onclick="requestTranscriptAccess()">View/Download Transcript (Restricted)</button>
-
-<!-- Hidden Transcript Buttons -->
-<div id="transcript-buttons" style="display:none;">
-  <a class="button" href="./John-Mburu-Transcript.pdf" target="_blank">View Transcript</a>
-  <a class="button" href="./John-Mburu-Transcript.pdf" download>Download Transcript</a>
-</div>
-
-<!-- Certification Buttons (Public) -->
-<br><br>
-<a class="button" href="./John Mburu's Certifications.pdf" target="_blank">View Certification</a>
-<a class="button" href="./John Mburu's Certifications.pdf" download>Download Certification</a>
-
-</body>
-
-
-
+									  <body>
+									  
+									
+									  
+									  <!-- View Buttons -->
+									  <a class="button" href="./John-Mburu-Transcript.pdf" target="_blank">View Transcript</a>
+									  <a class="button" href="./John Mburu's Certifications.pdf" target="_blank">View Certification</a>
+									  
+									  <!-- Download Buttons -->
+									  <br><br>
+									  <a class="button" href="./John-Mburu-Transcript.pdf" download>Download Transcript</a>
+									  <a class="button" href="./John Mburu's Certifications.pdf" download>Download Certification</a>
+									  
+									  </body>
 											
 									
 								
