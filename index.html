@@ -99,20 +99,34 @@
 										  }
 										</style>
 									  </head>
-									  <body>
-									  
-									
-									  
-									  <!-- View Buttons -->
-									  <a class="button" href="./John-Mburu-Transcript.pdf" target="_blank">View Transcript</a>
-									  <a class="button" href="./John Mburu's Certifications.pdf" target="_blank">View Certification</a>
-									  
-									  <!-- Download Buttons -->
-									  <br><br>
-									  <a class="button" href="./John-Mburu-Transcript.pdf" download>Download Transcript</a>
-									  <a class="button" href="./John Mburu's Certifications.pdf" download>Download Certification</a>
-									  
-									  </body>
+									<body>
+										<!-- View Buttons -->
+										<a class="button" href="#" onclick="checkPassword('view')">View Transcript</a>
+										<a class="button" href="./John Mburu's Certifications.pdf" target="_blank">View Certification</a>
+										
+										<!-- Download Buttons -->
+										<br><br>
+										<a class="button" href="#" onclick="checkPassword('download')">Download Transcript</a>
+										<a class="button" href="./John Mburu's Certifications.pdf" download>Download Certification</a>
+
+										<script>
+											function checkPassword(action) {
+												const password = prompt("Enter the password to access the transcript:");
+												if (password === "99") {
+													if (action === "view") {
+														window.open('./John-Mburu-Transcript.pdf', '_blank');
+													} else if (action === "download") {
+														const link = document.createElement('a');
+														link.href = './John-Mburu-Transcript.pdf';
+														link.download = 'John-Mburu-Transcript.pdf';
+														link.click();
+													}
+												} else {
+													alert("Incorrect password. Access denied.");
+												}
+											}
+										</script>
+									</body>
 											
 									
 								
